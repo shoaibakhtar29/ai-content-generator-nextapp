@@ -33,8 +33,8 @@ export default function Home() {
       <li className=" font-semibold text-lg"><Link href={'/dashboard/settings'}>Setting</Link></li>
       </ul>
     </div>
-    <h1 className=" flex gap-1 items-center block font-bold text-gray-800 text-2xl dark:text-neutral-200 ">
-        <Image src={'/logo.jpg'} width={40} height={40}/><span className="">Content</span>
+    <h1 className=" flex gap-1 items-center font-bold text-gray-800 text-2xl dark:text-neutral-200 ">
+        <Image src={'/logo.jpg'} width={40} height={40} alt=""/><span className="">Content</span>
         <span className="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent"> Generator</span>
       </h1>
   </div>
