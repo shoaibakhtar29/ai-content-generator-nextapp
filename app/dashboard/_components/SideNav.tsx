@@ -38,9 +38,9 @@ function SideNav() {
     },[])
 
   return (
-    <div className='h-screen relative p-5 shadow-sm border bg-white'>
+    <div className=' h-full relative p-5 shadow-sm border bg-white'>
         <div className='flex justify-center'>
-        <Image src={'/logo.jpg'} alt='logo' width={150} height={130} />
+        <Image className=' w-12 sm:block md:w-24' src={'/logo.jpg'} alt='logo' width={150} height={150} />
         </div>
         <hr className='my-6 border' />
         <div className='mt-3'>
@@ -52,7 +52,7 @@ function SideNav() {
                     ${path==menu.path&&'bg-primary text-white'}
                     `}>
                         <menu.icon className='h-6 w-6'/>
-                        <h2 className='text-lg' >{menu.name}</h2>
+                        <h2 className=' text-sm sm:text-base md:text-lg' >{menu.name}</h2>
                     </div>
                 </Link>
             ))}

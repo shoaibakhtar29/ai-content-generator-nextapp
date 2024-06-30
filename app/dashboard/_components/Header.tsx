@@ -10,7 +10,7 @@ function Header() {
         <input type='text' placeholder='search.... ' className=' outline-none' />
       </div>
       <div className=' flex gap-5 items-center'>
-        <h2 className=' bg-primary p-1 rounded-full text-xs text-white px-2'>Join membership just for 99Rs/Month</h2>
+        <h2 className=' hidden sm:block bg-primary p-1 rounded-full text-xs text-white px-2'>Join membership just for 99Rs/Month</h2>
         <UserButton/>
       </div>
     </div>

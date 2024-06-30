@@ -1,4 +1,3 @@
-
 import Templates from '@/app/(data)/Templates'
 import { Button } from '@/components/ui/button'
 import { db } from '@/utils/db'
@@ -36,12 +35,12 @@ async function History() {
     <div className='m-5 p-5 border rounded-lg bg-white'>
         <h2 className='font-bold text-3xl'>History</h2>
         <p className='text-gray-500'>Search your previously generate AI content</p>
-        <div className='grid grid-cols-7 font-bold bg-secondary mt-5 py-3 px-3'>
+        <div className=' grid grid-cols-7 font-bold bg-secondary mt-5 py-3 px-3'>
             <h2 className='col-span-2'>TEMPLATE</h2>
-            <h2 className='col-span-2'>AI RESP</h2>
+            <span className=' hidden sm:block'><h2 className=' col-span-2'>AI RESP</h2></span>
             <h2>DATE</h2>
-            <h2>WORDS</h2>
-            <h2>COPY</h2>
+            <h2 className=' hidden sm:block'>WORDS</h2>
+            <h2 className=' hidden sm:block'>COPY</h2>
         </div>
         {HistoryList.map((item:HISTORY,index:number)=>(
             <>
@@ -50,10 +49,10 @@ async function History() {
                 <Image src={GetTemplateName(item?.templateSlug)?.icon} width={25} height={25} alt='icon' />
                 {GetTemplateName(item.templateSlug)?.name}
             </h2>
-            <h2 className='col-span-2 line-clamp-3 mr-3'>{item?.aiResponse}</h2>
+            <span className=' hidden sm:block'><h2 className=' col-span-2 line-clamp-3 mr-3'>{item?.aiResponse}</h2></span>
             <h2>{item.createdAt}</h2>
-            <h2>{item?.aiResponse.length}</h2>
-            <h2>
+            <h2 className=' hidden sm:block'>{item?.aiResponse.length}</h2>
+            <h2 className=' hidden sm:block'>
               <CopyButton aiResponse={item.aiResponse} />
             </h2>
         </div>
@@ -64,4 +63,4 @@ async function History() {
   )
 }
 
-export default History
+export default History   
